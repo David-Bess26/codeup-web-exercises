@@ -1,10 +1,80 @@
-/*
-multi
-line
-comment
-*/
+body {
+    background-image: url("../");
+    font-family: 'American Typewriter', sans-serif;
+    background-color: gray;
+}
+
+h2 {
+    text-decoration: underline;
+    font-size: 40px;
+}
+
+ul {
+    list-style: square;
+}
+
+table th {
+    font-family: "American Typewriter";
+    font-size: 40px;
+}
+
+table, th, tr, td {
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+
+a:hover {
+    color: gold;
+    font-style: italic;
+}
+
+a:link {
+    color: blanchedalmond;
+}
+
+a:visited {
+    color: greenyellow;
+}
+
+a:active {
+    color: deeppink;
+}
+
+.company-vision {
+    position: relative;
+    text-align: center;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+}
+
+.centered {
+    text-align: center;
+    font-size: 21px;
+}
 
 .fancy-header {
-    color: purple; /* single line comment */
-    text-decoration: underline;
+    color: greenyellow;
+}
+
+.page-break {
+    margin-top: -15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#main-header {
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: -5px;
+}
+
+#product-header {
+    margin-bottom: -15px;
 }
