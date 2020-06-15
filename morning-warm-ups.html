@@ -2,32 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Morning Warmups</title>
 </head>
 <body>
-    <script> 
-    function f(num) {
-    return num * 5;
+<script>
+    // Write a JavaScript function that takes in a number and returns the number multiplied by 5.
+
+    function multiplyNumberByFive(num) {
+        return num * 5;
     }
-    console.log(mutiplyNumberByFive(5));
-    </script>
-    <script>
-        console.log(a=(b="Happy Birthday")+"to You\n",a,b+" DearDavid\n",a)
-    </script>
-    <script>
-        function countUp5(num) {
-        for (let i=0;
+
+    // console.log(multiplyNumberByFive(5));
+
+    //     Write a function that sings “Happy Birthday”
+    // Make it sing to whoever’s birthday it is
+
+    function singHappyBirthday(name) {
+        console.log("Happy Birthday to You,");
+        console.log("Happy Birthday to You,");
+        console.log("Happy Birthday Dear " + name);
+        console.log("Happy Birthday to You!!!");
+    }
+
+    // singHappyBirthday("Vanessa");
+
+    // Write a js function that will take in a number and from there count the next 5 numbers
+
+    function countUp5(num){
+        for (let i=0;i<5;i++) {
+            console.log(num+i);
         }
-        
-    </script.>
-    const str = 'Life, the universe and everything. Answer:';
+    }
 
-    console.log(`${str} ${str.length}`);
-    <script>
-  function lengthOfString() {
+    // countUp5(5);
 
-  }
+    // Write a function that returns the number 7.
+    function returnsSeven() {
+        return 7;
+    }
 
-    </script>
+    // console.log(returnsSeven());
+
+
+    // Write a JavaScript function that returns the length of a string passed through it.
+
+    function lengthOfString(string) {
+        return string.length;
+    }
+
+    // console.log(lengthOfString("Howdy Codeup!"));
+
+    // Write a JavaScript function that returns the number of characters in a string passed through it.
+
+    function numberOfCharactersInString(str) {
+        return lengthOfString(str);
+    }
+
+    // console.log(lengthOfString("Howdy Codeup!"));
+
+    // Write a JavaScript function that will return the diameter of a circle with a radius of the circle passed through it.
+    function diameterOfCircle(radius) {
+        return radius * 2;
+    }
+
+    console.log(diameterOfCircle(returnsSeven()));
+
+</script>
 </body>
 </html>
