@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<nav><h1>Hello, this is a webpage!</h1></nav>
+<main>
+    <div id="divId" class="codeup">
+        <p id="paragraph" class="para">Here is a collection of words!</p>
+    </div>
+    <div id="box" height="50px" style="background-color: blue">
+        <img src="img/man.jpg" id="manPic" height="300px" >
+    </div>
+    <hr>
+    <p class="para">.</p>
+    <div id="listDiv" class="codeup">
+        <ul>Here is a list of things:
+            <li>Things that I like</li>
+            <li>Things that I don't like</li>
+            <li>Things that I want to eat.</li>
+        </ul>
+    </div>
+</main>
+<!--<script src="js/jquery-2.2.4.js"></script>-->
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+
+        // alert($('h1').html());
+
+        // $('li').css("font-size", "20px");
+        // $('p, li, h1').css("background-color", "yellow");
+
+
+        $('#box').click(function () {
+            $('#box').animate({
+                marginLeft: "100%",
+                // 'transform': "rotate(1800deg)"
+            }, 300, "linear");
+
+        });
+
+        $('h1').click(function () {
+            $('h1').css("background-color", "blue");
+        });
+        $('p').dblclick(function () {
+            $('p').css("font-size", "18px");
+        });
+        $('li').hover(function () {
+            $(this).css("color", "red");
+        }, function () {
+            $(this).css("color", "black");
+        });
+
+
+
+    });
+
+
+
+
+</script>
+</body>
+</html>
