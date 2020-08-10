@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAP</title>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        #map {
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+<h1>Hello Hyperion!</h1>
+
+<div id="map"></div>
+
+<!--begin scripts-->
+
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script src="js/keys.js"></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script>
+
+    /***************/
+    //create array//
+    /**************/
+
+    var array = [
+        {
+            name: "snooze",
+            address: "255 E Basse Rd #160, San Antonio, TX 78209"
+        },
+        {
+            name: "chesters",
+            address: "240 E Houston St, San Antonio, TX 78205"
+        },
+        {
+            name: "Dads bbq",
+            address: "431 Normandy ave, San Antonio, TX 78209"
+        }
+    ];
+
+    /**************/
+    // build map //
+    /*************/
+
+    mapboxgl.accessToken = mapboxToken;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/satellite-streets-v10',
+        zoom: 10,
+        center: [-98.487484, 29.42389]
+    });
+
+    /*******************/
+    // marker options //
+    /*******************/
+
+    var markerOptions = {
+        color: "#ff0000",
+        draggable: true
+    };
+
+    /***************/
+    // begin array //
+    /**************/
+
+    array.forEach(function (element, index){
+        geocode(element.address, mapboxToken).then(function(result){
+            var popup = new mapboxgl.Popup()
+                .setText(element.name)
+                .addTo(map);
+            var marker = new mapboxgl.Marker(markerOptions)
+                .setLngLat(result)
+                .togglePopup()
+                .addTo(map)
+                .setPopup(popup);
+            console.log("This is the " + index + " one.");
+        });
+    });
+</script>
+</body>
+</html>
